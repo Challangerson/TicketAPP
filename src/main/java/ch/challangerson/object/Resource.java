@@ -9,8 +9,6 @@ public class Resource {
     private static final Map<Type, URL> resources = new HashMap<>();
 
     public Resource() {
-//        this.resources.put(Type.MAIN, getClass().getResource("//ch.challangerson/view/Main.fxml"));
-//        System.out.println(getClass().getResource("/ch/challangerson/view/Main.fxml"));
         resources.put(Type.MAIN, Resource.class.getResource("/ch/challangerson/view/Main.fxml"));
         resources.put(Type.LOGO, Resource.class.getResource("/ch/challangerson/view/image/parking-ticket.png"));
         resources.put(Type.ALERT_CSS, Resource.class.getResource("/ch/challangerson/style/alert.css"));

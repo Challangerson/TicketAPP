@@ -1,20 +1,20 @@
-/* small_form.css */
+
 
 .root-pane {
-    -fx-background-color: #e9eff5; /* Light bluish-grey background */
+    -fx-background-color: #e9eff5;
     -fx-font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .form-label {
     -fx-font-size: 13px;
-    -fx-text-fill: #2c3e50; /* Dark blue-grey text */
+    -fx-text-fill: #2c3e50;
     -fx-font-weight: bold;
 }
 
 .form-combo-box {
     -fx-font-size: 13px;
     -fx-background-color: #ffffff;
-    -fx-border-color: #bdc3c7; /* Light grey border */
+    -fx-border-color: #bdc3c7;
     -fx-border-radius: 4px;
     -fx-background-radius: 4px;
     -fx-padding: 3px 5px;
@@ -26,11 +26,11 @@
 }
 
 .form-combo-box .arrow-button .arrow {
-    -fx-background-color: #34495e; /* Darker arrow */
+    -fx-background-color: #34495e;
 }
 
 .form-combo-box:focused {
-    -fx-border-color: #3498db; /* Bright blue border when focused */
+    -fx-border-color: #3498db;
     -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 6, 0, 0, 0);
 }
 
@@ -41,17 +41,17 @@
 }
 
 .combo-box-popup .list-view .list-cell:filled:hover {
-    -fx-background-color: #dce4ec; /* Light hover effect */
+    -fx-background-color: #dce4ec;
     -fx-text-fill: #2c3e50;
 }
 
 .combo-box-popup .list-view .list-cell:filled:selected {
-    -fx-background-color: #3498db; /* Blue for selected item */
+    -fx-background-color: #3498db;
     -fx-text-fill: white;
 }
 
 .submit-button {
-    -fx-background-color: #3498db; /* Blue background */
+    -fx-background-color: #3498db;
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
@@ -77,32 +77,31 @@
 }
 
 .submit-button:hover {
-    -fx-background-color: #2980b9; /* Darker blue on hover */
+    -fx-background-color: #2980b9;
 }
 
 .submit-button:pressed {
-    -fx-background-color: #2471a3; /* Even darker blue when pressed */
-    -fx-effect: none; /* Remove shadow when pressed */
+    -fx-background-color: #2471a3;
+    -fx-effect: none;
 }
 
-/* New style for the Cancel button */
 .cancel-button {
-    -fx-background-color: #f4f6f8; /* Lighter grey, distinct from main background */
-    -fx-text-fill: #495057; /* Dark grey text */
-    -fx-border-color: #ced4da; /* Grey border */
+    -fx-background-color: #f4f6f8;
+    -fx-text-fill: #495057;
+    -fx-border-color: #ced4da;
     -fx-border-radius: 4px;
     -fx-background-radius: 4px;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-padding: 10px 15px; /* Consistent vertical padding with submit */
+    -fx-padding: 10px 15px;
 }
 
 .cancel-button:hover {
-    -fx-background-color: #e9ecef; /* Slightly darker grey on hover */
+    -fx-background-color: #e9ecef;
     -fx-border-color: #adb5bd;
 }
 
 .cancel-button:pressed {
-    -fx-background-color: #dee2e6; /* Even darker grey when pressed */
+    -fx-background-color: #dee2e6;
     -fx-effect: innershadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
 }

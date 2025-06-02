@@ -1,39 +1,36 @@
-/* --- styles.css --- */
 
-/* General Styles */
 .root {
-    -fx-font-family: "Arial", sans-serif; /* Using a common sans-serif font */
-    -fx-background-color: #F4F2F7; /* A very light lavender background */
+    -fx-font-family: "Arial", sans-serif;
+    -fx-background-color: #F4F2F7;
 }
 
 .label {
     -fx-font-size: 13px;
-    -fx-text-fill: #4A4A4A; /* Dark grey for good readability */
+    -fx-text-fill: #4A4A4A;
 }
 
-/* User Selection Area */
-/* Add fx:id="userSelectionHBox" to your HBox in FXML for these styles */
+
 #userSelectionHBox {
     -fx-padding: 15px;
     -fx-spacing: 12px;
     -fx-alignment: center-left;
-    -fx-background-color: #EDE7F6; /* Light Purple background (Material Design Deep Purple 50) */
-    -fx-border-color: #D1C4E9; /* Lighter purple border (Material Design Deep Purple 100) */
-    -fx-border-width: 0 0 2px 0; /* Bottom border for separation */
-    -fx-background-radius: 0 0 5px 5px; /* Slightly rounded bottom corners if desired */
+    -fx-background-color: #EDE7F6;
+    -fx-border-color: #D1C4E9;
+    -fx-border-width: 0 0 2px 0;
+    -fx-background-radius: 0 0 5px 5px;
 }
 
 .combo-box, .text-field {
     -fx-pref-height: 32px;
     -fx-background-color: white;
-    -fx-border-color: #B39DDB; /* Light Purple border (Material Design Deep Purple 200) */
+    -fx-border-color: #B39DDB;
     -fx-border-radius: 4px;
-    -fx-prompt-text-fill: #9E9E9E; /* Grey for prompt text */
+    -fx-prompt-text-fill: #9E9E9E;
     -fx-font-size: 13px;
 }
 
 .combo-box:focused, .text-field:focused {
-    -fx-border-color: #7C4DFF; /* Main Purple focus border (Material Design Deep Purple A200) */
+    -fx-border-color: #7C4DFF;
     -fx-border-width: 2px;
     -fx-background-insets: 0;
 }
@@ -44,59 +41,59 @@
     -fx-padding: 6px 10px;
 }
 .combo-box .list-cell:hover {
-    -fx-background-color: #F0EBF4; /* Very light purple hover */
+    -fx-background-color: #F0EBF4;
 }
 .combo-box .list-cell:filled:selected, .combo-box .list-cell:filled:selected:hover {
-    -fx-background-color: #7C4DFF; /* Main Purple selection */
+    -fx-background-color: #7C4DFF;
     -fx-text-fill: white;
 }
 
 
-/* Buttons - General */
+
 .button {
-    -fx-background-color: #7C4DFF; /* Main Purple */
+    -fx-background-color: #7C4DFF;
     -fx-text-fill: white;
     -fx-font-size: 13px;
     -fx-font-weight: bold;
     -fx-padding: 8px 18px;
     -fx-background-radius: 5px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 0, 2, 3); /* Subtle shadow */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 0, 2, 3);
     -fx-cursor: hand;
 }
 
 .button:hover {
-    -fx-background-color: #673AB7; /* Darker Purple on hover (Material Design Deep Purple 600) */
+    -fx-background-color: #673AB7;
 }
 
 .button:pressed {
-    -fx-background-color: #512DA8; /* Even Darker Purple when pressed (Material Design Deep Purple 700) */
+    -fx-background-color: #512DA8;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 4, 0, 1, 2);
 }
 
-/* TabPane and Tabs */
+
 .tab-pane {
     -fx-tab-min-height: 35px;
     -fx-tab-max-height: 35px;
 }
 
 .tab-pane .tab-header-area .tab-header-background {
-    -fx-background-color: #EDE7F6; /* Light Purple for header area */
+    -fx-background-color: #EDE7F6;
 }
 
 .tab-pane .tab {
-    -fx-background-color: #D1C4E9; /* Lighter purple for unselected tabs */
+    -fx-background-color: #D1C4E9;
     -fx-padding: 8px 22px 8px 22px;
     -fx-background-insets: 0;
-    -fx-background-radius: 6px 6px 0 0; /* Rounded top corners */
-    -fx-border-color: transparent; /* Remove default borders */
+    -fx-background-radius: 6px 6px 0 0;
+    -fx-border-color: transparent;
 }
 
 .tab-pane .tab:selected {
-    -fx-background-color: #7C4DFF; /* Main Purple for selected tab */
-    -fx-border-color: #7C4DFF #7C4DFF white #7C4DFF; /* Border to blend with content */
+    -fx-background-color: #7C4DFF;
+    -fx-border-color: #7C4DFF #7C4DFF white #7C4DFF;
     -fx-border-width: 1px;
-    -fx-focus-color: transparent; /* Remove focus ring */
-    -fx-faint-focus-color: transparent; /* Remove faint focus ring */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
 
 .tab-pane .tab:selected .tab-label {
@@ -105,36 +102,35 @@
 }
 
 .tab-pane .tab .tab-label {
-    -fx-text-fill: #512DA8; /* Dark Purple text for unselected tabs */
+    -fx-text-fill: #512DA8;
     -fx-font-size: 13px;
 }
 
 .tab-pane .tab-content-area {
-    -fx-background-color: white; /* White content area for contrast */
+    -fx-background-color: white;
     -fx-padding: 20px;
     -fx-border-color: #D1C4E9;
     -fx-border-width: 1px 1px 1px 1px;
-    -fx-background-radius: 0 0 6px 6px; /* Match tab radius */
+    -fx-background-radius: 0 0 6px 6px;
 }
 
-/* TableView Styling */
 .table-view {
     -fx-background-color: white;
-    -fx-border-color: #B39DDB; /* Light Purple border for the table */
+    -fx-border-color: #B39DDB;
     -fx-border-radius: 4px;
-    -fx-table-cell-border-color: #E0E0E0; /* Light grey for cell borders */
+    -fx-table-cell-border-color: #E0E0E0;
 }
 
 .table-view .column-header-background {
-    -fx-background-color: #7C4DFF; /* Main Purple for header background */
+    -fx-background-color: #7C4DFF;
 }
 
 .table-view .column-header, .table-view .filler {
-    -fx-background-color: transparent; /* Headers show column-header-background */
-    -fx-border-color: #673AB7; /* Slightly darker purple for header cell borders */
-    -fx-border-width: 0 1px 1px 0; /* Right and bottom border for header cells */
+    -fx-background-color: transparent;
+    -fx-border-color: #673AB7;
+    -fx-border-width: 0 1px 1px 0;
     -fx-padding: 10px;
-    -fx-size: 35px; /* Header height */
+    -fx-size: 35px;
 }
 
 .table-view .column-header .label {
@@ -146,51 +142,51 @@
 
 .table-view .table-cell {
     -fx-padding: 8px;
-    -fx-border-color: transparent transparent #EAEAEA transparent; /* Bottom border for cells */
+    -fx-border-color: transparent transparent #EAEAEA transparent;
     -fx-text-fill: #333333;
     -fx-font-size: 12px;
 }
 
-/* Zebra striping for TableView rows */
+
 .table-row-cell:odd {
-    -fx-background-color: #F8F6FA; /* Very light purple tint for odd rows */
+    -fx-background-color: #F8F6FA;
 }
 .table-row-cell:even {
     -fx-background-color: white;
 }
 
 .table-row-cell:hover {
-    -fx-background-color: #E8E0F2; /* Light purple hover on row */
+    -fx-background-color: #E8E0F2;
 }
 
 .table-row-cell:selected {
-    -fx-background-color: #B39DDB; /* Light purple selection (Material Design Deep Purple 200) */
-    -fx-text-fill: white; /* Ensure text in selected cells is white for contrast */
+    -fx-background-color: #B39DDB;
+    -fx-text-fill: white;
 }
 .table-row-cell:selected .table-cell {
-    -fx-text-fill: white; /* Text fill for cells within a selected row */
+    -fx-text-fill: white;
 }
 
 
-/* Buttons within Table Cells (Action Column) */
+
 .table-cell .button {
     -fx-font-size: 11px;
     -fx-padding: 5px 10px;
-    -fx-background-color: #8A2BE2; /* BlueViolet - slightly different for distinction or use main purple */
-    -fx-effect: none; /* Remove general button shadow if too much in a table */
+    -fx-background-color: #8A2BE2;
+    -fx-effect: none;
 }
 .table-cell .button:hover {
     -fx-background-color: #7C4DFF;
 }
 
 
-/* VBox/HBox inside tabs for consistent spacing */
+
 .tab-pane .tab-content-area .vbox, .tab-pane .tab-content-area .hbox {
-    -fx-spacing: 15px; /* Spacing for elements inside tab VBox/HBox */
+    -fx-spacing: 15px;
 }
 
-/* Input fields and button in the "Zażalenia" response section */
-#responseZazalenieBox { /* Add fx:id to the VBox in FXML if not already */
+
+#responseZazalenieBox {
     -fx-padding: 10px;
     -fx-border-color: #D1C4E9;
     -fx-border-width: 1px;
@@ -199,10 +195,10 @@
 }
 
 
-/* Basic ScrollBar styling */
+
 .scroll-bar:horizontal .track,
 .scroll-bar:vertical .track{
-    -fx-background-color: #F0EBF4; /* Very light purple track */
+    -fx-background-color: #F0EBF4;
     -fx-border-color: transparent;
     -fx-background-radius: 0.0em;
     -fx-border-radius: 2.0em;
@@ -219,17 +215,17 @@
 
 .scroll-bar .increment-arrow,
 .scroll-bar .decrement-arrow{
-    -fx-shape: " "; /* Hides default arrows; can be replaced with SVG */
+    -fx-shape: " ";
     -fx-padding: 0.15em;
 }
 
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #B39DDB; /* Light purple scrollbar thumb */
+    -fx-background-color: #B39DDB;
     -fx-background-insets: 2.0, 0.0, 0.0;
     -fx-background-radius: 2.0em;
 }
 .scroll-bar:horizontal .thumb:hover,
 .scroll-bar:vertical .thumb:hover {
-    -fx-background-color: #7C4DFF; /* Main purple on hover */
+    -fx-background-color: #7C4DFF;
 }

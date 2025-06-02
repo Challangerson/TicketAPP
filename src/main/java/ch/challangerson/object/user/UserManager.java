@@ -29,7 +29,6 @@ public class UserManager {
                     user.setLastName(resultSet.getString("nazwisko"));
                     user.setId(resultSet.getInt("id_uzytkownika"));
                     user.setAdress(resultSet.getString("adres"));
-//                    user.setPhoto(resultSet.getString("photo"));
                     user.setPhoto("/ch/challangerson/view/image/avatar_user.jpg");
                     user.setJob(Job.getJob(resultSet.getString("inne")));
                     roles.put(login, user);
