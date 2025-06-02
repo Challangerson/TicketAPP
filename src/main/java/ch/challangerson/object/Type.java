@@ -9,5 +9,8 @@ public enum Type {
     POLICEMAN,
     ATTENDANT,
     LOGO,
-    ALERT_CSS;
+    ALERT_CSS,
+    ADD_PANEL,
+    REMOVE_PANEL,
+    STYLESHEET;
 }

@@ -1,24 +1,66 @@
 package ch.challangerson.object.user;
 
 
+import ch.challangerson.object.car.Car;
+import ch.challangerson.object.punishment.Punishment;
+import ch.challangerson.object.session.Session;
+import ch.challangerson.object.ticket.Ticket;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
-    private String login;
+    private final String login;
     private String password;
     private String firstName, lastName, adress, photo;
     private Job job;
     private long lastLogin;
-    private Long id;
+    private int id;
+    private List<Session> sessionList;
+    private List<Punishment> punishmentList;
+    private List<Ticket> ticketsList;
+    private List<Car> cars;
 
     public User(String login, String password) {
         this.login = login;
         this.password = password;
         this.job = Job.USER;
         this.lastLogin = System.currentTimeMillis();
+        this.sessionList = new ArrayList<>();
+        this.punishmentList = new ArrayList<>();
+        this.ticketsList = new ArrayList<>();
+        this.cars = new ArrayList<>();
     }
 
-    public User() {
+    public List<Car> getCars() {
+        return this.cars;
+    }
 
+
+
+    public List<Session> getSessionList() {
+        return this.sessionList;
+    }
+
+    public void setSessionList(List<Session> sessionList) {
+        this.sessionList = sessionList;
+    }
+
+    public List<Punishment> getPunishmentList() {
+        return this.punishmentList;
+    }
+
+    public void setPunishmentList(List<Punishment> punishmentList) {
+        this.punishmentList = punishmentList;
+    }
+
+    public List<Ticket> getTicketsList() {
+        return this.ticketsList;
+    }
+
+    public void setTicketsList(List<Ticket> ticketsList) {
+        this.ticketsList = ticketsList;
     }
 
     public String getLogin() {
@@ -89,11 +131,11 @@ public class User {
         this.photo = photo;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public int getId() {
+        return this.id;
     }
 
-    public Long getId() {
-        return id;
+    public void setId(int id) {
+        this.id = id;
     }
 }

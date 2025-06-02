@@ -14,6 +14,10 @@ public class Resource {
         resources.put(Type.MAIN, Resource.class.getResource("/ch/challangerson/view/Main.fxml"));
         resources.put(Type.LOGO, Resource.class.getResource("/ch/challangerson/view/image/parking-ticket.png"));
         resources.put(Type.ALERT_CSS, Resource.class.getResource("/ch/challangerson/style/alert.css"));
+        resources.put(Type.USER, Resource.class.getResource("/ch/challangerson/view/UserPanel.fxml"));
+        resources.put(Type.ADD_PANEL, Resource.class.getResource("/ch/challangerson/view/AddSessionPanel.fxml"));
+        resources.put(Type.STYLESHEET, Resource.class.getResource("/ch/challangerson/style/style.css"));
+        resources.put(Type.REMOVE_PANEL, Resource.class.getResource("/ch/challangerson/view/RemoveSessionPanel.fxml"));
     }
 
     static {
