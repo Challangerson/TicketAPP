@@ -1,0 +1,108 @@
+/* small_form.css */
+
+.root-pane {
+    -fx-background-color: #e9eff5; /* Light bluish-grey background */
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.form-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50; /* Dark blue-grey text */
+    -fx-font-weight: bold;
+}
+
+.form-combo-box {
+    -fx-font-size: 13px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7; /* Light grey border */
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 3px 5px;
+}
+
+.form-combo-box .arrow-button {
+    -fx-background-color: #dce4ec;
+    -fx-background-radius: 0 4px 4px 0;
+}
+
+.form-combo-box .arrow-button .arrow {
+    -fx-background-color: #34495e; /* Darker arrow */
+}
+
+.form-combo-box:focused {
+    -fx-border-color: #3498db; /* Bright blue border when focused */
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 6, 0, 0, 0);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 5px 10px;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #dce4ec; /* Light hover effect */
+    -fx-text-fill: #2c3e50;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #3498db; /* Blue for selected item */
+    -fx-text-fill: white;
+}
+
+.submit-button {
+    -fx-background-color: #3498db; /* Blue background */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 1, 1);
+}
+
+
+.cancel-button {
+    -fx-background-color: #dc1b22;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 10px 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 1, 1);
+}
+
+.cancel-button:hover {
+    -fx-background-color: #f63a51;
+    -fx-text-fill: #000000;
+}
+
+.submit-button:hover {
+    -fx-background-color: #2980b9; /* Darker blue on hover */
+}
+
+.submit-button:pressed {
+    -fx-background-color: #2471a3; /* Even darker blue when pressed */
+    -fx-effect: none; /* Remove shadow when pressed */
+}
+
+/* New style for the Cancel button */
+.cancel-button {
+    -fx-background-color: #f4f6f8; /* Lighter grey, distinct from main background */
+    -fx-text-fill: #495057; /* Dark grey text */
+    -fx-border-color: #ced4da; /* Grey border */
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 15px; /* Consistent vertical padding with submit */
+}
+
+.cancel-button:hover {
+    -fx-background-color: #e9ecef; /* Slightly darker grey on hover */
+    -fx-border-color: #adb5bd;
+}
+
+.cancel-button:pressed {
+    -fx-background-color: #dee2e6; /* Even darker grey when pressed */
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.05), 2, 0, 0, 1);
+}
