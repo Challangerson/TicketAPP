@@ -8,75 +8,67 @@
 <?import javafx.scene.text.*?>
 
 <BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.challangerson.controller.UserController"> <left>
-    <VBox alignment="TOP_CENTER" prefWidth="280.0" spacing="10.0"
-          style="-fx-background-color: #f0f2f5; -fx-border-width: 0 1px 0 0; -fx-border-color: #dcdcdc;">
+    <VBox alignment="TOP_CENTER" prefWidth="280.0" spacing="10.0" style="-fx-background-color: #f0f2f5; -fx-border-width: 0 1px 0 0; -fx-border-color: #dcdcdc;">
         <padding>
-            <Insets bottom="30.0" left="20.0" right="20.0" top="30.0"/>
+            <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
         </padding>
         <StackPane fx:id="profileAreaStackPane" maxHeight="100.0" minHeight="100.0" prefHeight="100.0">
             <VBox.margin>
-                <Insets bottom="5.0"/>
+                <Insets bottom="5.0" />
             </VBox.margin>
-            <Circle fx:id="profileImagePlaceholder" fill="white" radius="50.0" stroke="#cccccc" strokeWidth="1.0"/>
-            <ImageView fx:id="profileImageView" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true"
-                       preserveRatio="true">
+            <Circle fx:id="profileImagePlaceholder" fill="white" radius="50.0" stroke="#cccccc" strokeWidth="1.0" />
+            <ImageView fx:id="profileImageView" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                 <clip>
-                    <Circle centerX="48.0" centerY="48.0" radius="48.0"/>
+                    <Circle centerX="48.0" centerY="48.0" radius="48.0" />
                 </clip>
             </ImageView>
         </StackPane>
 
         <Label fx:id="aboutTextLabel" text="about" textAlignment="CENTER">
             <font>
-                <Font name="System Regular" size="14.0"/>
+                <Font name="System Regular" size="14.0" />
             </font>
             <VBox.margin>
-                <Insets bottom="25.0"/>
+                <Insets bottom="25.0" />
             </VBox.margin>
         </Label>
         <VBox prefHeight="200.0" prefWidth="100.0">
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="244.0" text="IMIE I NAZWISKO"
-                   textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="244.0" text="IMIE I NAZWISKO" textAlignment="CENTER">
                 <font>
-                    <Font name="System Bold" size="15.0"/>
+                    <Font name="System Bold" size="15.0" />
                 </font>
             </Label>
             <Label fx:id="data" alignment="CENTER" prefHeight="17.0" prefWidth="241.0" text="Label">
                 <font>
-                    <Font size="14.0"/>
+                    <Font size="14.0" />
                 </font>
             </Label>
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="244.0" text="ADRES" textAlignment="CENTER">
                 <font>
-                    <Font name="System Bold" size="15.0"/>
+                    <Font name="System Bold" size="15.0" />
                 </font>
             </Label>
             <Label fx:id="address" alignment="CENTER" prefHeight="17.0" prefWidth="241.0" text="Label">
                 <font>
-                    <Font size="14.0"/>
+                    <Font size="14.0" />
                 </font>
             </Label>
         </VBox>
 
-        <Button fx:id="aktualnaSesjaButton" maxWidth="Infinity" prefHeight="45.0"
-                style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 0 0 15px;"
-                text="aktualna sesja" onAction="#setSessions"/>
+        <Button fx:id="aktualnaSesjaButton" maxWidth="Infinity" onAction="#setSessions" prefHeight="45.0" style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 0 0 15px;" text="aktualna sesja" />
 
-        <Button fx:id="mandatyButton" maxWidth="Infinity" prefHeight="45.0"
-                style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 0 0 15px;"
-                text="mandaty" onAction="#setPunishments">
+        <Button fx:id="mandatyButton" maxWidth="Infinity" onAction="#setPunishments" prefHeight="45.0" style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 0 0 15px;" text="mandaty">
             <VBox.margin>
-                <Insets bottom="8.0"/>
+                <Insets bottom="8.0" />
             </VBox.margin>
         </Button>
 
-        <Button fx:id="wnioskiButton" maxWidth="Infinity" prefHeight="45.0"
-                style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 0 0 15px;"
-                text="wnioski" onAction="#setWnioski">
+        <Button fx:id="wnioskiButton" maxWidth="Infinity" onAction="#setWnioski" prefHeight="45.0" style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 0 0 15px;" text="wnioski">
             <VBox.margin>
-                <Insets bottom="8.0"/>
+                <Insets bottom="8.0" />
             </VBox.margin>
         </Button>
+         <Button mnemonicParsing="false" text="WYLOGUJ" onAction="#logout"/>
 
     </VBox>
 </left>
@@ -84,35 +76,24 @@
     <center>
         <AnchorPane fx:id="mainContentAreaPane" style="-fx-background-color: #ffffff;">
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </padding>
             <Label text="Lista" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
                 <font>
-                    <Font name="System Bold" size="32.0"/>
+                    <Font name="System Bold" size="32.0" />
                 </font>
             </Label>
             <HBox layoutX="228.0" layoutY="14.0" prefHeight="100.0" prefWidth="692.0">
                 <HBox.margin>
-                    <Insets left="50.0"/>
-                    <Insets bottom="50.0"/>
+                    <Insets left="50.0" />
+                    <Insets bottom="50.0" />
                 </HBox.margin>
 
                 <HBox.margin>
-                    <Insets left="50.0"/>
+                    <Insets left="50.0" />
                 </HBox.margin>
-                <Button fx:id="add" maxWidth="Infinity" mnemonicParsing="false" prefHeight="45.0"
-                        style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 15px 0 15px;"
-                        text="DODAJ" onAction="#addSession"/>
-                <Button fx:id="remove" maxWidth="Infinity" mnemonicParsing="false" prefHeight="45.0"
-                        style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 15px 0 15px;"
-                        text="USUN" onAction="#removeSession"/>
-                <Button fx:id="extend" maxWidth="Infinity" mnemonicParsing="false" prefHeight="45.0"
-                        style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 15px 0 15px;"
-                        text="PRZEDLUZ">
-                    <opaqueInsets>
-                        <Insets/>
-                    </opaqueInsets>
-                </Button>
+                <Button fx:id="add" maxWidth="Infinity" mnemonicParsing="false" onAction="#addSession" prefHeight="45.0" style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 15px 0 15px;" text="DODAJ" />
+                <Button fx:id="remove" maxWidth="Infinity" mnemonicParsing="false" onAction="#removeSession" prefHeight="45.0" style="-fx-font-size: 15px; -fx-alignment: CENTER_LEFT; -fx-background-radius: 5; -fx-padding: 0 15px 0 15px;" text="USUN" />
             </HBox>
             <TableView fx:id="parkingTableView" layoutX="14.0" layoutY="114.0" prefHeight="543.0" prefWidth="940.0">
 

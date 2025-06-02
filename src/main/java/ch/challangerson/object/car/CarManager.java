@@ -17,6 +17,18 @@ public class CarManager {
 
     }
 
+    public void deleteCar(int id) {
+        System.out.println("Deleting car with id: " + id);
+        this.sqlExecute.executeUpdateSync("DELETE FROM pojazdy WHERE id_pojazdu = '" + id + "';");
+
+    }
+
+    public void addCar(User user, Car car) {
+        this.sqlExecute.executeUpdateSync("INSERT INTO pojazdy (id_uzytkownika, rok_produkcji, vin, marka, model, nr_rejestracyjny, ubezpieczony) " +
+                "VALUES ('" + user.getId() + "', '" + car.getYear() + "', '" + car.getVin() + "', '" + car.getBrand() + "', '" + car.getModel() + "', '" + car.getRegistration() + "', '" + (car.isUbezpieczony() ? 1 : 0) + "');");
+        user.getCars().add(car);
+    }
+
     public void setCars(User user) {
         this.sqlExecute.executeQuery("SELECT * FROM pojazdy WHERE id_uzytkownika ='" + user.getId() + "';", resultSet -> {
             try {

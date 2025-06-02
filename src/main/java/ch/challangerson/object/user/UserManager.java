@@ -31,7 +31,7 @@ public class UserManager {
                     user.setAdress(resultSet.getString("adres"));
 //                    user.setPhoto(resultSet.getString("photo"));
                     user.setPhoto("/ch/challangerson/view/image/avatar_user.jpg");
-//                    user.setJob(Job.valueOf(resultSet.getString("job").toUpperCase()));
+                    user.setJob(Job.getJob(resultSet.getString("inne")));
                     roles.put(login, user);
                     users.put(user.getId(), user);
                 }

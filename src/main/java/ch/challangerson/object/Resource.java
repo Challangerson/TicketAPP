@@ -18,6 +18,10 @@ public class Resource {
         resources.put(Type.ADD_PANEL, Resource.class.getResource("/ch/challangerson/view/AddSessionPanel.fxml"));
         resources.put(Type.STYLESHEET, Resource.class.getResource("/ch/challangerson/style/style.css"));
         resources.put(Type.REMOVE_PANEL, Resource.class.getResource("/ch/challangerson/view/RemoveSessionPanel.fxml"));
+        resources.put(Type.LOGO, Resource.class.getResource("/ch/challangerson/view/image/logo.png"));
+        resources.put(Type.ADMIN, Resource.class.getResource("/ch/challangerson/view/AdminPanel.fxml"));
+        resources.put(Type.ADD_CAR, Resource.class.getResource("/ch/challangerson/view/AdminAddCar.fxml"));
+        resources.put(Type.ADD_PUNISHMENT, Resource.class.getResource("/ch/challangerson/view/AdminAddPunishment.fxml"));
     }
 
     static {
@@ -32,6 +36,7 @@ public class Resource {
     public static URL getResourceName(Type type) {
         return resources.get(type);
     }
+
 
 
 }

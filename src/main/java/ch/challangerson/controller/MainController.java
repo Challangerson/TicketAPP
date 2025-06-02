@@ -3,17 +3,13 @@ package ch.challangerson.controller;
 import ch.challangerson.object.BaseImplentation;
 import ch.challangerson.object.Resource;
 import ch.challangerson.object.Type;
-import ch.challangerson.object.role.Role;
 import ch.challangerson.object.user.Job;
 import ch.challangerson.object.user.User;
-import ch.challangerson.object.user.UserManager;
 import ch.challangerson.util.StarterFile;
 import ch.challangerson.util.alert.AlertType;
 import ch.challangerson.util.alert.AlertUtil;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
@@ -22,7 +18,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -80,6 +75,7 @@ public class MainController extends BaseImplentation {
 
         switch (job) {
             case USER -> this.openPanel(Type.USER, user);
+            case ADMIN -> this.openPanel(Type.ADMIN, user);
         }
 
 
@@ -93,8 +89,17 @@ public class MainController extends BaseImplentation {
 
         try {
             Parent root = fxmlLoader.load();
-            UserController userController = fxmlLoader.getController();
-            userController.setUserInformation(user);
+
+            switch (type) {
+                case USER -> {
+                    UserController userController = fxmlLoader.getController();
+                    userController.setUserInformation(user);
+                }
+
+                case ADMIN -> {
+
+                }
+            }
 
             Stage stage = (Stage) this.loginField.getScene().getWindow();
             stage.setScene(new Scene(root));
@@ -102,7 +107,7 @@ public class MainController extends BaseImplentation {
 
         } catch (Exception e) {
             AlertUtil.showAlert(AlertType.ERROR, "Panie kolego cos nie dziala, sprawdz logi!");
-
+            e.printStackTrace();
         }
 
     }

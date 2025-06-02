@@ -12,6 +12,7 @@ import ch.challangerson.util.alert.AlertType;
 import ch.challangerson.util.alert.AlertUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -38,7 +39,7 @@ public class UserController extends BaseImplentation {
     private TableView<Object> parkingTableView;
 
     @FXML
-    private Button add,remove, extend;
+    private Button add,remove;
 
 
     private User user;
@@ -63,7 +64,7 @@ public class UserController extends BaseImplentation {
 
                 this.add.setDisable(false);
                 this.remove.setDisable(false);
-                this.extend.setDisable(false);
+
 
                 TableColumn<Object, String> idParkinguColumn = new TableColumn<>("parking_id");
                 idParkinguColumn.setCellValueFactory(new PropertyValueFactory<>("parking_id"));
@@ -87,7 +88,7 @@ public class UserController extends BaseImplentation {
             case PUNISHMENTS -> {
                 this.add.setDisable(true);
                 this.remove.setDisable(true);
-                this.extend.setDisable(true);
+
 
 
                 TableColumn<Object, String> idPunishmentColumn = new TableColumn<>("punishment_id");
@@ -111,7 +112,7 @@ public class UserController extends BaseImplentation {
             case CONCLUSIONS -> {
                 this.add.setDisable(true);
                 this.remove.setDisable(true);
-                this.extend.setDisable(true);
+
 
                 TableColumn<Object, String> idConclusionColumn = new TableColumn<>("ticket");
                 idConclusionColumn.setCellValueFactory(new PropertyValueFactory<>("id_ticket"));
@@ -214,6 +215,8 @@ public class UserController extends BaseImplentation {
 
         try {
             Stage stage = new Stage();
+            Image image = new Image(getClass().getResourceAsStream("/ch/challangerson/view/image/logo.png"));
+            stage.getIcons().add(image);
             stage.setTitle("Remove Session");
             FXMLLoader fxmlLoader = new FXMLLoader(Resource.getResourceName(Type.REMOVE_PANEL));
             Parent root = fxmlLoader.load();
@@ -229,6 +232,27 @@ public class UserController extends BaseImplentation {
             this.isRemovingOpen = true;
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public void logout() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Resource.getResourceName(Type.MAIN));
+
+            try {
+                Parent root = fxmlLoader.load();
+                Stage stage = (Stage) this.add.getScene().getWindow();
+                Image image = new Image(getClass().getResourceAsStream("/ch/challangerson/view/image/logo.png"));
+                stage.getIcons().add(image);
+                stage.setScene(new Scene(root));
+                stage.show();
+
+            } catch (Exception e) {
+                AlertUtil.showAlert(AlertType.ERROR, "Panie kolego cos nie dziala, sprawdz logi!");
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

@@ -9,6 +9,7 @@ module ch.challangerson.javaproject {
     requires com.zaxxer.hikari;
     requires java.sql;
     requires mysql.connector.j;
+    requires java.desktop;
 
     opens ch.challangerson to javafx.fxml;
     exports ch.challangerson;

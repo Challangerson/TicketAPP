@@ -14,6 +14,15 @@ public enum Job {
         this.name = name;
     }
 
+    public static Job getJob(String name) {
+        for (Job job : Job.values()) {
+            if (job.getName().equalsIgnoreCase(name)) {
+                return job;
+            }
+        }
+        return USER; // Default to USER if no match found
+    }
+
     public String getName() {
         return this.name;
     }

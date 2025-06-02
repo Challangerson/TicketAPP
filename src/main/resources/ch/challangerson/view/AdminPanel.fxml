@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../style/admin.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.challangerson.controller.AdminController">
+    <children>
+        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label text="Użytkownik:" />
+                        <ComboBox fx:id="userComboBox" prefWidth="200.0" promptText="Wybierz użytkownika" />
+                        <Button fx:id="loadUserDataButton" mnemonicParsing="false" onAction="#handleLoadUserData" text="Wczytaj dane" />
+                  <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="LOGOUT" textAlignment="RIGHT" textOverrun="WORD_ELLIPSIS" onAction="#logout">
+                     <HBox.margin>
+                        <Insets left="140.0" />
+                     </HBox.margin>
+                  </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <TabPane fx:id="detailsTabPane" VBox.vgrow="ALWAYS">
+                    <tabs>
+                        <Tab text="Kary">
+                            <content>
+                                <VBox spacing="10.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                                        <TableView fx:id="karyTableView" prefHeight="350.0">
+                                            <columns>
+                                                <TableColumn fx:id="karyActionColumn" minWidth="120.0" prefWidth="120.0" text="Akcje" />
+                                                <TableColumn fx:id="karyIdKaryColumn" prefWidth="75.0" text="id_kary" />
+                                                <TableColumn fx:id="karyIdUzytkownikaColumn" prefWidth="100.0" text="id_uzytkownika" />
+                                                <TableColumn fx:id="karyCenaColumn" prefWidth="75.0" text="cena" />
+                                                <TableColumn fx:id="karyOplaconeColumn" prefWidth="75.0" text="opłacone" />
+                                                <TableColumn fx:id="karyRecydywaColumn" prefWidth="75.0" text="recydywa" />
+                                                <TableColumn fx:id="karyPowodColumn" prefWidth="250.0" text="powód" />
+                                                <TableColumn fx:id="karyZazaleniaIdColumn" prefWidth="75.0" text="id_zazalenia" />
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                        <HBox spacing="10.0">
+                                            <children>
+                                                <Button fx:id="addKaryButton" mnemonicParsing="false" onAction="#handleAddKary" text="Dodaj nową karę" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Zażalenia">
+                            <content>
+                                <VBox spacing="10.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                                        <TableView fx:id="zazaleniaTableView" prefHeight="350.0">
+                                            <columns>
+                                                <TableColumn fx:id="zazaleniaActionColumn" minWidth="120.0" prefWidth="120.0" text="Akcje" />
+                                                <TableColumn fx:id="zazaleniaIdZazaleniaColumn" prefWidth="80.0" text="id_zazalenia" />
+                                                <TableColumn fx:id="zazaleniaIdUzytkownikaColumn" prefWidth="100.0" text="id_uzytkownika" />
+                                                <TableColumn fx:id="zazaleniaSprawdzoneColumn" prefWidth="80.0" text="sprawdzone" />
+                                                <TableColumn fx:id="zazaleniaOdpowiedzColumn" prefWidth="80.0" text="odpowiedź" />
+                                                <TableColumn fx:id="zazaleniaPowodOdrzutuColumn" prefWidth="250.0" text="powód odrzutu" />
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                        <VBox fx:id="responseZazalenieBox" spacing="5.0">
+                                            <Label text="Odpowiedź na zaznaczone zażalenie:" />
+                                            <TextField fx:id="zazalenieOdpowiedzTextField" promptText="Wprowadź odpowiedź" />
+                                            <TextField fx:id="zazaleniePowodOdrzutuTextField" promptText="Wprowadź powód odrzucenia (jeśli dotyczy)" />
+                                            <Button fx:id="submitZazalenieButton" mnemonicParsing="false" onAction="#handleSubmitZazalenie" text="Zatwierdź odpowiedź" />
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Pojazdy">
+                            <content>
+                                <VBox spacing="10.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <children>
+                                        <TableView fx:id="pojazdyTableView" prefHeight="350.0">
+                                            <columns>
+                                                <TableColumn fx:id="pojazdyActionColumn" minWidth="120.0" prefWidth="120.0" text="Akcje" />
+                                                <TableColumn fx:id="pojazdyIdPojazduColumn" prefWidth="75.0" text="id_pojazdu" />
+                                                <TableColumn fx:id="pojazdyIdUzytkownikaColumn" prefWidth="100.0" text="id_uzytkownika" />
+                                                <TableColumn fx:id="pojazdyVinColumn" prefWidth="150.0" text="VIN" />
+                                                <TableColumn fx:id="pojazdyMarkaColumn" prefWidth="100.0" text="marka" />
+                                                <TableColumn fx:id="pojazdyModelColumn" prefWidth="100.0" text="model" />
+                                                <TableColumn fx:id="pojazdyRokProdukcjiColumn" prefWidth="100.0" text="rok_produkcji" />
+                                                <TableColumn fx:id="pojazdyNrRejestracyjnyColumn" prefWidth="120.0" text="nr_rejestracyjny" />
+                                                <TableColumn fx:id="pojazdyUbezpieczonyColumn" prefWidth="80.0" text="ubezpieczony" />
+                                            </columns>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                        <HBox spacing="10.0">
+                                            <children>
+                                                <Button fx:id="addPojazdButton" mnemonicParsing="false" onAction="#handleAddPojazd" text="Dodaj nowy pojazd" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

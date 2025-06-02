@@ -28,7 +28,7 @@
             </children>
         </Pane>
 
-        <StackPane layoutX="700.0" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #007AFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <StackPane layoutX="700.0" prefHeight="800.0" prefWidth="500.0" style="-fx-background-color: #7d2688;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="360.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 0);">
                     <padding>

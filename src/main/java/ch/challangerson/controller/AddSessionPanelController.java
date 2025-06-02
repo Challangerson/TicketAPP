@@ -69,6 +69,11 @@ public class AddSessionPanelController extends BaseImplentation {
         String adress = this.adressSelected.getValue();
         String car = this.carSelected.getValue();
 
+        if(adress == null || car == null) {
+            AlertUtil.showAlert(AlertType.ERROR, "Select car and adress");
+            return;
+        }
+
         if (adress.isEmpty() || car.isEmpty()) {
             AlertUtil.showAlert(AlertType.ERROR, "Select car and adress");
             return;

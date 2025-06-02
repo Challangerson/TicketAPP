@@ -12,5 +12,7 @@ public enum Type {
     ALERT_CSS,
     ADD_PANEL,
     REMOVE_PANEL,
-    STYLESHEET;
+    STYLESHEET,
+    ADD_CAR,
+    ADD_PUNISHMENT;
 }

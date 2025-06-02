@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="TOP_CENTER" fx:controller="ch.challangerson.controller.CarController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Car Information" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+    <Separator/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+
+        <!-- Year Field -->
+        <Label text="Year:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="yearField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- VIN Field -->
+        <Label text="VIN:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="vinField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Brand Field -->
+        <Label text="Brand:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="brandField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Model Field -->
+        <Label text="Model:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="modelField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <!-- Registration Field -->
+        <Label text="Registration:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="registrationField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <!-- Insurance Checkbox -->
+        <Label text="Insured:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="isUbezpieczony" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Save" onAction="#saveCar" defaultButton="true"/>
+        <Button text="Cancel" onAction="#cancel"/>
+    </HBox>
+</VBox>

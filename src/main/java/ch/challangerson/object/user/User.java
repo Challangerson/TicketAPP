@@ -93,10 +93,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "Imie: \n " + this.firstName + "\n" +
-                "Nazwisko: \n " + this.lastName + "\n" +
-                "Adres: \n " + this.adress + "\n" +
-                "Praca: \n " + this.job.toString() + "\n";
+        return "User: " + this.firstName + " " + this.lastName;
     }
 
     public String getFirstName() {

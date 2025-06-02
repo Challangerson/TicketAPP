@@ -1,14 +1,12 @@
 package ch.challangerson.controller;
 
 import ch.challangerson.object.BaseImplentation;
-import ch.challangerson.object.parking.Parking;
 import ch.challangerson.object.session.Session;
 import ch.challangerson.object.user.User;
 import ch.challangerson.util.alert.AlertType;
 import ch.challangerson.util.alert.AlertUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;

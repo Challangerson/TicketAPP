@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="TOP_CENTER" fx:controller="ch.challangerson.controller.AddPunishmentController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Punishment Information" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+    <Separator/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <!-- Price Field -->
+        <Label text="Price:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="priceField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Ticket Number Field -->
+        <Label text="Ticket Number:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="ticketField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Response Field -->
+        <Label text="Response:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="responseField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Paid Checkbox -->
+        <Label text="Paid:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="paidCheckBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Recidivism Checkbox -->
+        <Label text="Recidivism:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="recidivismCheckBox" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Save" onAction="#savePunishment" defaultButton="true"/>
+        <Button text="Cancel" onAction="#cancel"/>
+    </HBox>
+</VBox>
