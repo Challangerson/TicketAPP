@@ -79,7 +79,8 @@
                                         <VBox fx:id="responseZazalenieBox" spacing="5.0">
                                             <Label text="Odpowiedź na zaznaczone zażalenie:" />
                                             <TextField fx:id="zazalenieOdpowiedzTextField" promptText="Wprowadź odpowiedź" />
-                                            <TextField fx:id="zazaleniePowodOdrzutuTextField" promptText="Wprowadź powód odrzucenia (jeśli dotyczy)" />
+                                            <CheckBox fx:id="zazalenieSprawdzoneCheckBox" text="Czy zaakceptowane" />
+<!--                                            <TextField fx:id="zazaleniePowodOdrzutuTextField" promptText="Wprowadź powód odrzucenia (jeśli dotyczy)" />-->
                                             <Button fx:id="submitZazalenieButton" mnemonicParsing="false" onAction="#handleSubmitZazalenie" text="Zatwierdź odpowiedź" />
                                         </VBox>
                                     </children>

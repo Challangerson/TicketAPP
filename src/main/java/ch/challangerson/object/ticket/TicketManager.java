@@ -19,6 +19,10 @@ public class TicketManager {
         this.userManager.getUsers().values().forEach(this::setTickets);
     }
 
+    public void updateResponseTicket(Ticket ticket) {
+        this.sqlExecute.executeUpdateSync("UPDATE zazalenia SET sprawdzone = '" + (ticket.isResponse() ? 1 : 0) + "', powod_odrzutu = '" + ticket.getResponse_text() + "', odpowiedz ='" + (ticket.isChecked() ? 1 : 0) + "' WHERE id_zazalenia = '" + ticket.getId_ticket() + "';");
+    }
+
 
     private void setTickets(User user) {
         this.sqlExecute.executeQuery("SELECT * FROM zazalenia WHERE id_uzytkownika = '" + user.getId() + "';", resultSet -> {

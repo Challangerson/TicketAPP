@@ -45,6 +45,7 @@ public class AdminController extends BaseImplentation {
     @FXML private TableColumn<Punishment, Integer> karyZazaleniaIdColumn;
 
 
+
     @FXML private TableView<Ticket> zazaleniaTableView;
     @FXML private TableColumn<Ticket, Void> zazaleniaActionColumn;
     @FXML private TableColumn<Ticket, Integer> zazaleniaIdZazaleniaColumn;
@@ -53,6 +54,7 @@ public class AdminController extends BaseImplentation {
     @FXML private TableColumn<Ticket, Boolean> zazaleniaOdpowiedzColumn; // Maps to Ticket.responseGiven
     @FXML private TableColumn<Ticket, String> zazaleniaPowodOdrzutuColumn; // Maps to Ticket.responseText
     @FXML private TextField zazalenieOdpowiedzTextField;
+    @FXML private CheckBox zazalenieSprawdzoneCheckBox;
 
     @FXML private TableView<Car> pojazdyTableView;
     @FXML private TableColumn<Car, Void> pojazdyActionColumn;
@@ -223,9 +225,11 @@ public class AdminController extends BaseImplentation {
             return;
         }
 
-        selectedTicket.setResponse_text(zazaleniaTableView.getSelectionModel().getSelectedItem().getResponse_text());
         selectedTicket.setResponse(true);
+        selectedTicket.setResponse_text(zazalenieOdpowiedzTextField.getText());
+        selectedTicket.setChecked(zazalenieSprawdzoneCheckBox.isSelected());
 
+        this.ticketManager.updateResponseTicket(selectedTicket);
         selectedTicket.setChecked(true);
         zazaleniaTableView.refresh();
 
